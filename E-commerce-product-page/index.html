@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <section class="header">
+        <div class="header-content-1">
+          <div>
+            <img src="./src/assets/logo.svg" alt="logo" />
+          </div>
+
+          <nav class="navs">
+            <ul>
+              <li>Collections</li>
+              <li>Men</li>
+              <li>Women</li>
+              <li>About</li>
+              <li>Contact</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="icons">
+          <img
+            src="./src/assets/icon-cart.svg"
+            class="cart-icon"
+            alt="cart-icon"
+          />
+          <img
+            src="./src/assets/image-avatar.png"
+            class="image-avatar"
+            alt="image-avatar"
+          />
+        </div>
+      </section>
+      <!-- This section includes the product images and description -->
+      <section class="product">
+        <div class="product-imgs">
+          <img
+            src="./src/assets/image-product-1.jpg"
+            class="shoe-image"
+            alt="shoe-image"
+          />
+        </div>
+        <div class="description">
+          <p class="product-name">SNEAKER COMPANY</p>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="about-product">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they'll withstand everything
+            the weather can offer.
+          </p>
+          <span class="price">$125.00</span>
+          <span class="discount">50%</span>
+          <p class="prev-price">
+            <s>$250.00</s>
+          </p>
+          <div class="count-btns">
+            
+            <button class="decrease-btn">
+              - 
+            </button>
+            <button class="value">
+              0
+            </button>
+            <button class="increase-btn">
+              +
+            </button>
+            <div class="add-to-cart">
+             
+              <button class="cart-btn">  <img src="./src/assets/icon-cart.svg" alt="cart-icon"> Add to cart</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- <h1 class="heading">hiiiii</h1> -->
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

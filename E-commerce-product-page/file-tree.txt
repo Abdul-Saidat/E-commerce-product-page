@@ -1,0 +1,69 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <style>
+      .title { font-family: 'Arial', sans-serif; font-size: 18px; font-weight: bold; fill: #2c3e50; }
+      .subtitle { font-family: 'Arial', sans-serif; font-size: 12px; fill: #7f8c8d; }
+      .folder-text { font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; fill: #27ae60; font-weight: bold; }
+      .file-text { font-family: 'Consolas', 'Courier New', monospace; font-size: 14px; fill: #3498db; }
+      .icon { font-family: 'Arial', sans-serif; font-size: 16px; }
+      .line { stroke: #bdc3c7; stroke-width: 1.5; }
+      .background { fill: #f8f9fa; }
+      .header-bg { fill: #ecf0f1; }
+      </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="800" class="background"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="60" class="header-bg"/>
+  <text x="20" y="25" class="title">📁 File Tree: E-commerce-product-page</text>
+          <text x="20" y="45" class="subtitle">Generated: 8/12/2025, 1:09:26 AM | FileTree Pro Extension</text>
+
+  <!-- Tree Structure -->
+    <line x1="15" y1="80" x2="25" y2="80" class="line"/>
+    <text x="30" y="85" class="icon">📁</text>
+    <text x="55" y="85" class="folder-text">public/</text>
+    <line x1="45" y1="100" x2="45" y2="110" class="line"/>
+    <line x1="45" y1="110" x2="55" y2="110" class="line"/>
+    <text x="60" y="115" class="icon">🖼️</text>
+    <text x="85" y="115" class="file-text">vite.svg</text>
+    <line x1="15" y1="155" x2="25" y2="155" class="line"/>
+    <text x="30" y="160" class="icon">📁</text>
+    <text x="55" y="160" class="folder-text">src/</text>
+    <line x1="45" y1="175" x2="45" y2="185" class="line"/>
+    <line x1="45" y1="185" x2="55" y2="185" class="line"/>
+    <text x="60" y="190" class="icon">📄</text>
+    <text x="85" y="190" class="file-text">counter.ts</text>
+    <line x1="45" y1="210" x2="45" y2="220" class="line"/>
+    <line x1="45" y1="220" x2="55" y2="220" class="line"/>
+    <text x="60" y="225" class="icon">📄</text>
+    <text x="85" y="225" class="file-text">main.ts</text>
+    <line x1="45" y1="245" x2="45" y2="255" class="line"/>
+    <line x1="45" y1="255" x2="55" y2="255" class="line"/>
+    <text x="60" y="260" class="icon">🎨</text>
+    <text x="85" y="260" class="file-text">style.css</text>
+    <line x1="45" y1="280" x2="45" y2="290" class="line"/>
+    <line x1="45" y1="290" x2="55" y2="290" class="line"/>
+    <text x="60" y="295" class="icon">🖼️</text>
+    <text x="85" y="295" class="file-text">typescript.svg</text>
+    <line x1="45" y1="315" x2="45" y2="325" class="line"/>
+    <line x1="45" y1="325" x2="55" y2="325" class="line"/>
+    <text x="60" y="330" class="icon">📄</text>
+    <text x="85" y="330" class="file-text">vite-env.d.ts</text>
+    <line x1="15" y1="370" x2="25" y2="370" class="line"/>
+    <text x="30" y="375" class="icon">🚫</text>
+    <text x="55" y="375" class="file-text">.gitignore</text>
+    <line x1="15" y1="380" x2="25" y2="380" class="line"/>
+    <text x="30" y="385" class="icon">🌐</text>
+    <text x="55" y="385" class="file-text">index.html</text>
+    <line x1="15" y1="390" x2="25" y2="390" class="line"/>
+    <text x="30" y="395" class="icon">📄</text>
+    <text x="55" y="395" class="file-text">package-lock.json</text>
+    <line x1="15" y1="400" x2="25" y2="400" class="line"/>
+    <text x="30" y="405" class="icon">📄</text>
+    <text x="55" y="405" class="file-text">package.json</text>
+    <line x1="15" y1="410" x2="25" y2="410" class="line"/>
+    <text x="30" y="415" class="icon">📄</text>
+    <text x="55" y="415" class="file-text">tsconfig.json</text>
+</svg>
