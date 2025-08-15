@@ -11,19 +11,35 @@
     <section class="container">
       <section class="header">
         <div class="header-content-1">
-          <div>
-            <img src="./src/assets/logo.svg" alt="logo" />
-          </div>
-
-          <nav class="navs">
-            <ul>
+          <input type="checkbox" name="checkbox" class="menu-toggle" id="menu-toggle">
+          <label for="menu-toggle" class="dropdown">&#9776;</label>
+          <div class="mobile-navs">
+            <nav class="navs">
+              <label for="menu-toggle" class="close-btn">&times;</label>
+               <ul>
               <li>Collections</li>
               <li>Men</li>
               <li>Women</li>
               <li>About</li>
               <li>Contact</li>
-            </ul>
-          </nav>
+               </ul>
+            </nav>
+          </div>
+          <div>
+            <img src="./src/assets/logo.svg" class="logo" alt="logo" />
+          </div>
+          <div class="desktop-navs">
+
+            <nav class="navs">
+              <ul>
+                <li>Collections</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
+            </nav>
+          </div>
         </div>
         <div class="icons">
           <img
@@ -46,6 +62,12 @@
             class="shoe-image"
             alt="shoe-image"
           />
+          <div class="lightbox-imgs">
+            <img src="./src/assets/image-product-1-thumbnail.jpg" alt="">
+            <img src="./src/assets/image-product-2-thumbnail.jpg" alt="">
+            <img src="./src/assets/image-product-3-thumbnail.jpg" alt="">
+            <img src="./src/assets/image-product-4-thumbnail.jpg" alt="">
+          </div>
         </div>
         <div class="description">
           <p class="product-name">SNEAKER COMPANY</p>
@@ -55,26 +77,31 @@
             Featuring a durable rubber outer sole, they'll withstand everything
             the weather can offer.
           </p>
-          <span class="price">$125.00</span>
-          <span class="discount">50%</span>
-          <p class="prev-price">
-            <s>$250.00</s>
-          </p>
-          <div class="count-btns">
-            
-            <button class="decrease-btn">
-              - 
-            </button>
-            <button class="value">
-              0
-            </button>
-            <button class="increase-btn">
-              +
-            </button>
-            <div class="add-to-cart">
-             
-              <button class="cart-btn">  <img src="./src/assets/icon-cart.svg" alt="cart-icon"> Add to cart</button>
+          <div class="pricing">
+            <div>
+              <span class="price">$125.00</span>
+              <span class="discount">50%</span>
             </div>
+            <p class="prev-price">
+              <s>$250.00</s>
+            </p>
+          </div>
+          <div class="count-btns">
+            <button class="decrease-btn">-</button>
+            <button class="value">0</button>
+            <button class="increase-btn">+</button>
+            <div class="desktop-cart-btn add-to-cart">
+              <button class="cart-btn">
+                <img src="./src/assets/icon-cart.svg" class="cart-icon" alt="cart-icon" /> Add to
+                cart
+              </button>
+            </div>
+          </div>
+          <div class="mobile-cart-btn add-to-cart">
+            <button class="cart-btn">
+              <img src="./src/assets/icon-cart.svg" class="cart-icon" alt="cart-icon" /> Add to
+              cart
+            </button>
           </div>
         </div>
       </section>
