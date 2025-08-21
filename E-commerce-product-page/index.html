@@ -11,25 +11,29 @@
     <section class="container">
       <section class="header">
         <div class="header-content-1">
-          <input type="checkbox" name="checkbox" class="menu-toggle" id="menu-toggle">
+          <input
+            type="checkbox"
+            name="checkbox"
+            class="menu-toggle"
+            id="menu-toggle"
+          />
           <label for="menu-toggle" class="dropdown">&#9776;</label>
           <div class="mobile-navs">
             <nav class="navs">
               <label for="menu-toggle" class="close-btn">&times;</label>
-               <ul>
-              <li>Collections</li>
-              <li>Men</li>
-              <li>Women</li>
-              <li>About</li>
-              <li>Contact</li>
-               </ul>
+              <ul>
+                <li>Collections</li>
+                <li>Men</li>
+                <li>Women</li>
+                <li>About</li>
+                <li>Contact</li>
+              </ul>
             </nav>
           </div>
           <div>
             <img src="./src/assets/logo.svg" class="logo" alt="logo" />
           </div>
           <div class="desktop-navs">
-
             <nav class="navs">
               <ul>
                 <li>Collections</li>
@@ -43,7 +47,6 @@
         </div>
         <div class="icons">
           <div class="cart-icon">
-
             <img
               src="./src/assets/icon-cart.svg"
               class="cart-icon"
@@ -60,16 +63,42 @@
       <!-- This section includes the product images and description -->
       <section class="product">
         <div class="product-imgs" id="product-imgs">
-          <img
-            src="./src/assets/image-product-1.jpg"
-            class="shoe-image"
-            alt="shoe-image"
-          />
+          <div>
+            <img
+              src="./src/assets/image-product-1.jpg"
+              class="shoe-image mobile-shoe-image"
+              alt="shoe-image"
+            />
+            <div class="nav-btns">
+              <button class="mobile-prev-btn">
+                <img src="./src/assets/icon-previous.svg" alt="" />
+              </button>
+              <button class="mobile-next-btn">
+                <img src="./src/assets/icon-next.svg" alt="" />
+              </button>
+            </div>
+          </div>
           <div class="lightbox-imgs">
-            <img src="./src/assets/image-product-1-thumbnail.jpg" class="lightbox-img-1" alt="">
-            <img src="./src/assets/image-product-2-thumbnail.jpg" class="lightbox-img-1" alt="">
-            <img src="./src/assets/image-product-3-thumbnail.jpg" class="lightbox-img-1" alt="">
-            <img src="./src/assets/image-product-4-thumbnail.jpg" class="lightbox-img-1" alt="">
+            <img
+              src="./src/assets/image-product-1-thumbnail.jpg"
+              class="lightbox-img"
+              alt=""
+            />
+            <img
+              src="./src/assets/image-product-2-thumbnail.jpg"
+              class="lightbox-img"
+              alt=""
+            />
+            <img
+              src="./src/assets/image-product-3-thumbnail.jpg"
+              class="lightbox-img"
+              alt=""
+            />
+            <img
+              src="./src/assets/image-product-4-thumbnail.jpg"
+              class="lightbox-img"
+              alt=""
+            />
           </div>
         </div>
         <div class="description">
@@ -95,21 +124,29 @@
             <button class="increase-btn">+</button>
             <div class="desktop-cart-btn add-to-cart">
               <button class="cart-btn">
-                <img src="./src/assets/icon-cart.svg" class="cart-icon" alt="cart-icon" /> Add to
-                cart
+                <img
+                  src="./src/assets/icon-cart.svg"
+                  class="cart-icon"
+                  alt="cart-icon"
+                />
+                Add to cart
               </button>
             </div>
           </div>
           <div class="mobile-cart-btn add-to-cart">
             <button class="cart-btn">
-              <img src="./src/assets/icon-cart.svg" class="cart-icon" alt="cart-icon" /> Add to
-              cart
+              <img
+                src="./src/assets/icon-cart.svg"
+                class="cart-icon"
+                alt="cart-icon"
+              />
+              Add to cart
             </button>
           </div>
         </div>
       </section>
     </section>
-    <!-- <h1 class="heading">hiiiii</h1> -->
+    <button class="checkout-btn">Checkout</button>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
