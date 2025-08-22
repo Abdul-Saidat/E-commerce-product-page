@@ -18,8 +18,8 @@ const thumbnail = [
 ]
 
 const controlBtns = [
-  {src: "/icon-next.svg"},
-  {src: "/icon-previous.svg"}
+  { src: "/icon-next.svg" },
+  { src: "/icon-previous.svg" }
 ]
 
 const defaultImage = document.getElementsByClassName('shoe-image')[0] as HTMLImageElement;
@@ -43,8 +43,8 @@ if (defaultImage) {
     thumbnailContainer.classList.add('preview-lightbox')
 
     function showImage(index: number, targetImg: HTMLImageElement, images: string[]) {
-    targetImg.src = images[index];
-}
+      targetImg.src = images[index];
+    }
 
 
     const images = Array.from(thumbnail).map(img => img.src);
@@ -76,17 +76,17 @@ if (defaultImage) {
     defaultImage.src = images[currentIndex]
 
     //go to previous image
-     previousIcon.addEventListener('click', () => {
+    previousIcon.addEventListener('click', () => {
       currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex, previewImg, images);
+      showImage(currentIndex, previewImg, images);
     });
 
     //go to next image
-     nextIcon.addEventListener('click', () => {
+    nextIcon.addEventListener('click', () => {
       currentIndex = (currentIndex + 1 + images.length) % images.length;
-     showImage(currentIndex, previewImg, images);
+      showImage(currentIndex, previewImg, images);
     });
-    
+
     //preview clicked image
     previewImg.src = defaultImage.src;
     previewImg.style.width = '350px'
@@ -111,7 +111,7 @@ if (defaultImage) {
 }
 
 //when next and previous buttons are clicked on mobile, display respective thumbnail images
-  let currentIndex = 0; // start with first image
+let currentIndex = 0; // start with first image
 const mobileImages = [...thumbnail]; // copy array
 
 const defaultMobileImg = document.getElementsByClassName('mobile-shoe-image')[0] as HTMLImageElement;
@@ -119,14 +119,14 @@ defaultMobileImg.src = mobileImages[currentIndex].src;
 
 const next = document.getElementsByClassName('mobile-next-btn')[0] as HTMLDivElement;
 next.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % mobileImages.length;
-    defaultMobileImg.src = mobileImages[currentIndex].src;
+  currentIndex = (currentIndex + 1) % mobileImages.length;
+  defaultMobileImg.src = mobileImages[currentIndex].src;
 });
 
 const prev = document.getElementsByClassName('mobile-prev-btn')[0] as HTMLDivElement;
 prev.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + mobileImages.length) % mobileImages.length;
-    defaultMobileImg.src = mobileImages[currentIndex].src;
+  currentIndex = (currentIndex - 1 + mobileImages.length) % mobileImages.length;
+  defaultMobileImg.src = mobileImages[currentIndex].src;
 });
 
 
@@ -142,6 +142,7 @@ productsAdded.classList.add('products-added');
 let defaultValue = document.getElementsByClassName('value')[0]
 
 const total: HTMLSpanElement = document.createElement('span');
+total.classList.add('display-total')
 total.style.fontSize = '16px';
 total.style.color = 'hsl(220, 14%, 75%)';
 
@@ -174,8 +175,12 @@ increaseBtn.addEventListener('click', () => {
     quantity.textContent = newValue.toString();
     let quantityValue = Number(quantity.textContent)
     let newTotal = getTotalPrice(priceValue, quantityValue)
-    total.textContent = newTotal.toString();
     quantity.textContent = quantityValue.toString();
+    total.innerHTML = `
+  <span class="single-price">$${priceValue.toFixed(2)}</span> 
+  x <span class="quantity">${quantityValue}</span> 
+  <strong class="total-price">$${newTotal.toFixed(2)}</strong>
+`;
   }
 }
 )
@@ -191,8 +196,12 @@ decreaseBtn.addEventListener('click', () => {
       quantity.textContent = newValue.toString();
       let quantityValue = Number(quantity.textContent)
       let newTotal = getTotalPrice(priceValue, quantityValue)
-      total.textContent = newTotal.toString();
       quantity.textContent = quantityValue.toString();
+      total.innerHTML = `
+  <span class="single-price">$${priceValue.toFixed(2)}</span> 
+  x <span class="quantity">${quantityValue}</span> 
+  <strong class="total-price">$${newTotal.toFixed(2)}</strong>
+`;
     }
   }
 })
@@ -234,19 +243,15 @@ addToCart.forEach(button => {
       // product image
       productImg.src = ctrlImgs[0].src;
       productImg.classList.add('cart-product');
-      productImg.style.width = '50px';
+      productImg.style.width = '70px';
+      productImg.style.height = '50px';
 
       //product name
       productName.textContent = 'Fall Limited Edition Sneakers'
       productName.style.fontSize = '13px'
-      productName.style.color = 'hsl(220, 14%, 75%)'
+      productName.style.color = 'hsl(220, 14%, 75%)';
 
-      //total price including price, quantity and product of price ad quantity
-      totalPrice.classList.add('total-price');
-    // totalPrice.innerHTML = `<span class="single-price">$${priceValue.toFixed(2)}</span> x <span class="quantity">${quantityValue}</span> <strong class="total-price</strong>`;
-
-
-      totalPrice.append(price, quantity, total);
+      totalPrice.append( total);
 
       //append name and totalPrice to product to style it
       product.append(productName, totalPrice);
